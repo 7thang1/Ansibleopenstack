@@ -17,7 +17,7 @@
           chpasswd: {expire: False}
           ssh_pwauth: True
           groups: users,wheel
-    - name: Wait 300 seconds, but only start checking after 60 seconds
+    - name: Wait 480 seconds, start checking after 480 seconds
       ansible.builtin.wait_for_connection:
         delay: 480
         timeout: 480
