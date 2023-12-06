@@ -4,14 +4,14 @@
   become: true
   tasks:
     - name: latest version of httpd 
-      ansible.builtin.yum:
+      ansible.builtin.apt:
         name:
           - git
           - httpd
         state: latest
     - name: Pull file from source
       ansible.builtin.git:
-        repo: http://gitlab.kdinesh.in/root/sampleweb.git
+        repo: https://gitlab.com/7thang1/sampleweb.git
         dest: /var/www/html
     - name: httpd enabled and running
       ansible.builtin.service:
